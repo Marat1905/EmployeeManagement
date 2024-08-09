@@ -11,7 +11,7 @@
         <vm:EmployeesViewModel/>
     </Window.DataContext>
     <Grid>
-        <ListView ItemsSource="{Binding Employees}">
+        <ListView PreviewMouseDoubleClick="ListView_PreviewMouseDoubleClick" ItemsSource="{Binding Employees}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn  DisplayMemberBinding="{Binding LastName}" Width="120" Header="Фамилия"/>
