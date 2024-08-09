@@ -4,17 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeeManagement.Views.Windows"
+        xmlns:vm="clr-namespace:EmployeeManagement.ViewModels"
         mc:Ignorable="d"
         Title="EmploeesView" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:EmployeesViewModel/>
+    </Window.DataContext>
     <Grid>
-        <ListView>
+        <ListView ItemsSource="{Binding Employees}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="120" Header="Фамилия"/>
-                    <GridViewColumn Width="120" Header="Имя"/>
-                    <GridViewColumn Width="120" Header="Возраст"/>
-                    <GridViewColumn Width="120" Header="Компания"/>
-                    <GridViewColumn Width="120" Header="Должность"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding LastName}" Width="120" Header="Фамилия"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding FirstName}" Width="120" Header="Имя"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding Age}" Width="120" Header="Возраст"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding CompanyName}" Width="120" Header="Компания"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding Position}" Width="120" Header="Должность"/>
+                    <GridViewColumn  DisplayMemberBinding="{Binding CityName}" Width="120" Header="Должность"/>
                 </GridView>
             </ListView.View>
         </ListView>
