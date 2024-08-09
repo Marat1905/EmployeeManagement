@@ -1,0 +1,23 @@
+﻿<Window x:Class="EmployeeManagement.Views.Windows.EmploeesView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeManagement.Views.Windows"
+        mc:Ignorable="d"
+        Title="EmploeesView" Height="450" Width="800">
+    <Grid>
+        <ListView>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="Фамилия"/>
+                    <GridViewColumn Width="120" Header="Имя"/>
+                    <GridViewColumn Width="120" Header="Возраст"/>
+                    <GridViewColumn Width="120" Header="Компания"/>
+                    <GridViewColumn Width="120" Header="Должность"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
